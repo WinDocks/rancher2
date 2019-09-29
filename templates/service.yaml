@@ -10,4 +10,5 @@ spec:
       protocol: TCP
       name: tcp
   selector:
-    app: dotnetapp
+    app: {{ template "windocks-sql-proxy.name" . }}
+    release: {{ .Release.Name }}
