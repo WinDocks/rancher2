@@ -7,7 +7,8 @@ spec:
   template:
     metadata:
       labels:
-        app: dotnetapp
+        app: {{ template "windocks-sql-proxy.name" . }}
+        release: {{ .Release.Name }}
     spec:
       containers:
         - image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
