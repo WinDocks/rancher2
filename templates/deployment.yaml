@@ -17,6 +17,6 @@ spec:
             - containerPort: {{ .Values.webapp.port }}
           env:
             - name: SQLSERVER_HOST
-              value: {{ .Values.sqlserverHost }}
+              value: {{ .Values.webapp.sqlserverHost }}
             - name: SQLSERVER_SA_PASSWORD
-              value: {{ .Values.sqlserverPassword }}
+              value: {{ .Values.webapp.sqlserverPassword }}
